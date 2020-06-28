@@ -13,7 +13,32 @@ const rl = readline.createInterface({
 
 const pigLatin = (word) => {
 
-  // Your code here
+let str = word;
+str = str.toLowerCase();
+str = str.trim();
+const ay = "ay";
+const yay = "yay"
+let n;
+// First if determines of word starts with a vowel
+ if( str.startsWith("a")||str.startsWith("e")||str.startsWith("i")||str.startsWith("o")||str.startsWith("u"))
+ { str = str.concat(yay)
+  return str;}
+ else {
+   
+    let firstLet = str.substr(0,1);
+    str = str.substr(1)
+    str=str.concat(firstLet)
+    if (str.startsWith("a")||str.startsWith("e")||str.startsWith("i")||str.startsWith("o")||str.startsWith("u"))
+      { str=str.concat(ay)
+        return str; }
+    firstLet = str.substr(0,1)
+    str = str.substr(1)
+    str=str.concat(firstLet)
+    str=str.concat(ay)
+    return str;
+ }
+
+
 
 }
 
