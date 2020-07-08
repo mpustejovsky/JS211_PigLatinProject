@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <script src="pig.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Pig Latin Translator</h1>
     <hr/>
     <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
+    <label for="inputWord">Input a phrase or word to translate</label>
+    <input type="text" id="inputWord" name="inputWord" size="50">
+    <button onclick="saveTrans()">Click to translate</button>
+    <button onclick="clearInput()">Click to clear input</button>
+    <br>Extra Spaces will be removed for translation
     <hr/>
+    The translations is:<br>
+    <div id="outputHere"></div>
+
   </body>
 </html>
